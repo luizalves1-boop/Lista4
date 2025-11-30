@@ -15,6 +15,9 @@ public class Main {
             case 3:
                 ex3();
                 break;
+            case 4:
+                ex4();
+                break;
         }
     }
 
@@ -43,6 +46,15 @@ public class Main {
         System.out.println("Informe um número: ");
         int num = sc.nextInt();
         System.out.println(Ex3.somaDigitosRecursiva(num, 0, 0));
+    }
+
+    public static void ex4(){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Informe um número: ");
+        int num = sc.nextInt();
+        System.out.println("Informe um expoente: ");
+        int exp = sc.nextInt();
+        System.out.println(Ex4.potenciaRecursiva(num, exp, 1));
     }
 
 }
