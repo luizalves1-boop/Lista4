@@ -1,19 +1,29 @@
 import java.util.Scanner;
 
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args){
+        ex1();
+        ex2();
+    }
+
+    public static void ex1(){
         Scanner sc = new Scanner(System.in);
         System.out.println("Informe um número: ");
         int num = sc.nextInt();
-        fatorial(num);
+        System.out.print("Versão Iterativa: ");
+        Ex1.collatzIterativo(num);
+        System.out.print("\nVersão Recursiva: ");
+        Ex1.collatzRecursivo(num);
     }
 
-    public static int fatorial (int num){
-        if(num == 0){
-            return 1;
-        }
-        return num*fatorial(num-1);
+    public static void ex2() {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Informe um número: ");
+        int num = sc.nextInt();
+        if(Ex2.primosRecursiva(num, 2))
+            System.out.println("É um número primo!");
+        else
+            System.out.println("Não é um número primo!");
     }
+
 }
