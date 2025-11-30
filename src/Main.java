@@ -18,6 +18,9 @@ public class Main {
             case 4:
                 ex4();
                 break;
+            case 5:
+                ex5();
+                break;
         }
     }
 
@@ -55,6 +58,15 @@ public class Main {
         System.out.println("Informe um expoente: ");
         int exp = sc.nextInt();
         System.out.println(Ex4.potenciaRecursiva(num, exp, 1));
+    }
+
+    public static void ex5(){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Informe um número: ");
+        int num = sc.nextInt();
+        System.out.println("Informe um segundo número: ");
+        int num2 = sc.nextInt();
+        System.out.println(Ex5.mdcRecursiva(num, num2, num));
     }
 
 }
