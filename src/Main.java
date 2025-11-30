@@ -3,10 +3,8 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-
-        System.out.println("Escolha o exercício: ");
+        System.out.println("Escolha um exercício (1 a 9): ");
         int opcao = sc.nextInt();
-        ;
         switch (opcao) {
             case 1:
                 ex1();
@@ -34,6 +32,9 @@ public class Main {
                 break;
             case 9:
                 ex9();
+                break;
+            default:
+                System.out.println("Não existe essa opção!");
                 break;
         }
     }
