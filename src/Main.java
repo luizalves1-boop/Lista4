@@ -2,8 +2,20 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args){
-        ex1();
-        ex2();
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Escolha o exercício: ");
+        int opcao = sc.nextInt();;
+        switch(opcao){
+            case 1:
+                ex1();
+                break;
+            case 2:
+                ex2();
+                break;
+            case 3:
+                ex3();
+                break;
+        }
     }
 
     public static void ex1(){
@@ -24,6 +36,13 @@ public class Main {
             System.out.println("É um número primo!");
         else
             System.out.println("Não é um número primo!");
+    }
+
+    public static void ex3(){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Informe um número: ");
+        int num = sc.nextInt();
+        System.out.println(Ex3.somaDigitosRecursiva(num, 0, 0));
     }
 
 }
