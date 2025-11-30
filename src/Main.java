@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        System.out.println(Ex8.palindromoRecursiva("arar", "arar".length() - 1));
+
         System.out.println("Escolha o exercício: ");
         int opcao = sc.nextInt();
         ;
@@ -28,6 +28,12 @@ public class Main {
                 break;
             case 7:
                 ex7();
+                break;
+            case 8:
+                ex8();
+                break;
+            case 9:
+                ex9();
                 break;
         }
     }
@@ -93,5 +99,23 @@ public class Main {
             num[i] = sc.nextInt();
         }
         System.out.println(Ex7.menorValorRecursiva(num, 0, Integer.MAX_VALUE));
+    }
+
+    public static void ex8(){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Informe uma palavra: ");
+        String palavra = sc.nextLine();
+        System.out.println(Ex8.palindromoRecursiva(palavra, palavra.length() - 1));
+    }
+
+    public static void ex9(){
+        Scanner sc = new Scanner(System.in);
+        int[] num = new int[10];
+        System.out.println("Informe um vetor de inteiros com [10] posições: ");
+        for (int i = 0; i < num.length; i++) {
+            System.out.println("Posição num[" + i + "]: ");
+            num[i] = sc.nextInt();
+        }
+        System.out.println(Ex9.somaVetorRecursiva(num, 0, 0));
     }
 }
