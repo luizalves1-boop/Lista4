@@ -3,6 +3,7 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
+        System.out.println(Ex8.palindromoRecursiva("arar", "arar".length() - 1));
         System.out.println("Escolha o exercício: ");
         int opcao = sc.nextInt();
         ;
